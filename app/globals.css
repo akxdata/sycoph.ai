@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1a1a18;
+  --paper: #f5f2eb;
+  --paper-dark: #ede9df;
+  --accent: #c84b2f;
+  --accent-light: #f0e8e5;
+  --muted: #8a8478;
+  --border: #d6d0c4;
+  --score-low: #4a7c59;
+  --score-mid: #c8842f;
+  --score-high: #c84b2f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Mono', monospace;
+  min-height: 100vh;
+}
+
+.serif { font-family: 'Instrument Serif', serif; }
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.fade-up { animation: fadeUp 0.4s ease forwards; }
+
+.thinking-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 1s ease infinite;
+}
+.thinking-dot:nth-child(2) { animation-delay: 0.15s; }
+.thinking-dot:nth-child(3) { animation-delay: 0.3s; }
