@@ -370,7 +370,7 @@ export default function Home() {
                       <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.65, marginBottom: 10 }}>
                         {result.audit.explanation}
                       </p>
-                      {result.audit.types_detected.length > 0 ? (
+                      {(result.audit.types_detected ?? []).length > 0 ? (
                         <div className="flex flex-wrap gap-2">
                           {result.audit.types_detected.map((t) => (
                             <span
