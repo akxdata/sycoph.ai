@@ -16,8 +16,6 @@ An anti-sycophantic AI writing assistant. Paste your writing, get honest feedbac
 - **Uncritical mirroring** — reflects the writer's own framing without interrogation
 - **Vague softening** — non-committal language that avoids direct critique
 
-## Setup (local)
-
 ## Vercel Hosting Link
 
 https://sycoph-ai.vercel.app/
